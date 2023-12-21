@@ -20,12 +20,54 @@ To write a program to perform linear search and binary search using python progr
 i)	#Use a linear search method to match the item in a list.
 ```
 
+Program for linear search method to match the item in a list
+Developed by:Reklies J
+RegisterNumber: 23000590
+'''
+def linearSearch(array,n,k):
+    for i in range(n):
+        if array[i]==k:
+            return i
+    return -1
+    
+array=eval(input())
+array.sort()
+k=eval(input())
+n=len(array)
+print(array)
+result=linearSearch(array,n,k)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
+Program to find the element in a list using Binary Search(Iterative Method)..
+Developed by:Reklies J
+RegisterNumber: 23000590
+'''
+def binarySearchIter(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+array=eval(input())
+array.sort()
+k=eval(input())
+print(array)
+result=binarySearchIter(array,k,0,len(array)-1)
+if result == -1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 
 
@@ -33,17 +75,40 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
+def binarySearchIter(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+array=eval(input())
+array.sort()
+k=eval(input())
+print(array)
+result=binarySearchIter(array,k,0,len(array)-1)
+if result == -1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 
 
 
 ```
-## Sample Input and Output
+## Output:
+i)	#Use a linear search method to match the item in a list.
+![Screenshot 2023-12-21 213028](https://github.com/Reklies/Search-Algorithm/assets/147139232/85640b99-b36c-4952-891c-61f6d916e6c8)
 
+ii)	# Find the element in a list using Binary Search(Iterative Method).
+![image](https://github.com/Reklies/Search-Algorithm/assets/147139232/2274c877-1dbc-4c46-8894-6ace814f0569)
 
+iii)	# Find the element in a list using Binary Search (recursive Method).
 
-
+![Screenshot 2023-12-21 213501](https://github.com/Reklies/Search-Algorithm/assets/147139232/161dba38-e29e-4fdc-aad3-dbbcbfab33ef)
 
 
 ## Result
